@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Luxira Records and Archive</title>
+
+  <meta name="description" content="Luxira Records and Archive maintains verified historical, planetary, and system records for preservation and reference.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #e8e1d2;
+      color: #10263a;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .banner-placeholder {
+      width: 100%;
+      min-height: 190px;
+      background: #10263a;
+      color: #e8e1d2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      border-bottom: 4px double #b7a98d;
+    }
+
+    .banner-placeholder h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      letter-spacing: 0.15em;
+      font-weight: normal;
+    }
+
+    .banner-placeholder p {
+      margin: 10px 0 0;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .page {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 270px 1fr;
+      min-height: 600px;
+    }
+
+    aside {
+      padding: 42px 30px;
+      border-right: 1px solid #9b927f;
+    }
+
+    aside h2 {
+      margin-top: 0;
+      font-size: 1rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: normal;
+    }
+
+    nav {
+      margin-top: 30px;
+    }
+
+    nav a {
+      display: block;
+      padding: 12px 0;
+      color: #10263a;
+      text-decoration: none;
+      border-bottom: 1px solid #bdb3a0;
+      letter-spacing: 0.06em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 42px 50px 70px;
+    }
+
+    main h2 {
+      margin-top: 0;
+      font-weight: normal;
+      letter-spacing: 0.08em;
+      font-size: 1.7rem;
+    }
+
+    .rule {
+      width: 70px;
+      height: 2px;
+      background: #10263a;
+      margin: 22px 0;
+    }
+
+    main p {
+      max-width: 700px;
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .record {
+      margin-top: 45px;
+      border-top: 3px double #9b927f;
+      padding-top: 25px;
+    }
+
+    .record-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .record a {
+      color: #10263a;
+      font-size: 1.25rem;
+    }
+
+    footer {
+      background: #10263a;
+      color: #e8e1d2;
+      text-align: center;
+      padding: 18px;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      aside {
+        border-right: none;
+        border-bottom: 1px solid #9b927f;
+      }
+
+      main {
+        padding: 35px 30px 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="banner-placeholder">
+    <div>
+      <h1>LUXIRA</h1>
+      <p>Records and Archive</p>
+    </div>
+  </header>
+
+  <div class="page">
+
+    <aside>
+      <h2>Records Division</h2>
+
+      <nav>
+        <a href="#">Archive Index</a>
+        <a href="#">About Luxira</a>
+      </nav>
+    </aside>
+
+    <main>
+      <h2>Luxira Records and Archive</h2>
+
+      <div class="rule"></div>
+
+      <p>
+        Luxira Records and Archive maintains verified historical,
+        planetary, and system records for preservation and reference.
+        Materials are retained according to archival classification
+        and may be subject to access restrictions.
+      </p>
+
+      <section class="record">
+        <div class="record-label">Public Archive Record</div>
+
+        <p>
+          <a href="../">628 Z7-B — Planetary Report</a>
+        </p>
+      </section>
+    </main>
+
+  </div>
+
+  <footer>
+    614 Y4 &nbsp; • &nbsp; In Light We Trust
+  </footer>
+
+</body>
+</html>
