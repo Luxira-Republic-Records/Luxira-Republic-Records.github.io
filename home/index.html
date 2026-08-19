@@ -167,31 +167,6 @@ object-fit: contain;
     }
   </style>
 </head>
-
-  <script>
-  function updateNST() {
-    const epoch = Date.UTC(2026, 7, 18, 0, 0, 0);
-    const now = Date.now();
-
-    const secondsPerDay = 36 * 60 * 60;
-    const elapsedSeconds = Math.floor((now - epoch) / 1000);
-
-    const nstSeconds =
-      ((elapsedSeconds % secondsPerDay) + secondsPerDay) % secondsPerDay;
-
-    const hours = Math.floor(nstSeconds / 3600);
-    const minutes = Math.floor((nstSeconds % 3600) / 60);
-    const seconds = nstSeconds % 60;
-
-    const pad = number => String(number).padStart(2, "0");
-
-    document.getElementById("nst-clock").textContent =
-      `${pad(hours)}:${pad(minutes)}:${pad(seconds)} NST`;
-  }
-
-  updateNST();
-  setInterval(updateNST, 1000);
-</script>b
   
 <body>
 
@@ -261,6 +236,31 @@ object-fit: contain;
   <footer>
     614 Y4 &nbsp; • &nbsp; In Light We Trust
   </footer>
+
+  <script>
+  function updateNST() {
+    const epoch = Date.UTC(2026, 7, 18, 0, 0, 0);
+    const now = Date.now();
+
+    const secondsPerDay = 36 * 60 * 60;
+    const elapsedSeconds = Math.floor((now - epoch) / 1000);
+
+    const nstSeconds =
+      ((elapsedSeconds % secondsPerDay) + secondsPerDay) % secondsPerDay;
+
+    const hours = Math.floor(nstSeconds / 3600);
+    const minutes = Math.floor((nstSeconds % 3600) / 60);
+    const seconds = nstSeconds % 60;
+
+    const pad = number => String(number).padStart(2, "0");
+
+    document.getElementById("nst-clock").textContent =
+      `${pad(hours)}:${pad(minutes)}:${pad(seconds)} NST`;
+  }
+
+  updateNST();
+  setInterval(updateNST, 1000);
+</script>
 
 </body>
 </html>
