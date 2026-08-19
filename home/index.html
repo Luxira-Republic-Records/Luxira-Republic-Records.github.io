@@ -36,6 +36,32 @@ object-fit: contain;
   margin: 0 auto;
 }
 
+    .institution-info {
+  margin-top: 55px;
+  padding-top: 25px;
+  border-top: 1px solid #bdb3a0;
+}
+
+.info-label {
+  margin-top: 24px;
+  margin-bottom: 7px;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6f6a60;
+}
+
+.info-value {
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.nst-clock {
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
     .page {
       max-width: 1200px;
       margin: 0 auto;
@@ -142,6 +168,31 @@ object-fit: contain;
   </style>
 </head>
 
+  <script>
+  function updateNST() {
+    const epoch = Date.UTC(2026, 7, 18, 0, 0, 0);
+    const now = Date.now();
+
+    const secondsPerDay = 36 * 60 * 60;
+    const elapsedSeconds = Math.floor((now - epoch) / 1000);
+
+    const nstSeconds =
+      ((elapsedSeconds % secondsPerDay) + secondsPerDay) % secondsPerDay;
+
+    const hours = Math.floor(nstSeconds / 3600);
+    const minutes = Math.floor((nstSeconds % 3600) / 60);
+    const seconds = nstSeconds % 60;
+
+    const pad = number => String(number).padStart(2, "0");
+
+    document.getElementById("nst-clock").textContent =
+      `${pad(hours)}:${pad(minutes)}:${pad(seconds)} NST`;
+  }
+
+  updateNST();
+  setInterval(updateNST, 1000);
+</script>b
+  
 <body>
 
   <header class="banner">
@@ -156,10 +207,32 @@ object-fit: contain;
     <aside>
       <h2>Records Division</h2>
 
-      <nav>
-<a href="/restricted/">Archive Index</a>
-<a href="/restricted/">About Luxira</a>
-      </nav>
+<nav>
+  <a href="/restricted/">Archive Index</a>
+  <a href="/restricted/">Republic Personnel</a>
+  <a href="/restricted/">About Luxira</a>
+</nav>
+
+      <div class="institution-info">
+
+  <div class="info-label">Central Archive</div>
+  <div class="info-value">
+    Administrative Complex 7-A<br>
+    Central District 04<br>
+    614 Y4
+  </div>
+
+  <div class="info-label">Operating Hours</div>
+  <div class="info-value">
+    08:00–27:00 NST
+  </div>
+
+  <div class="info-label">National Standard Time</div>
+  <div class="nst-clock" id="nst-clock">
+    00:00:00 NST
+  </div>
+
+</div>
     </aside>
 
     <main>
