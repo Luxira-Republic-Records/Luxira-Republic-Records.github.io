@@ -20,30 +20,18 @@
       font-family: Georgia, "Times New Roman", serif;
     }
 
-    .banner-placeholder {
+    .banner {
       width: 100%;
-      min-height: 190px;
       background: #10263a;
-      color: #e8e1d2;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 30px;
-      border-bottom: 4px double #b7a98d;
+      border-bottom: 3px solid #10263a;
+      line-height: 0;
     }
 
-    .banner-placeholder h1 {
-      margin: 0;
-      font-size: clamp(2rem, 5vw, 4rem);
-      letter-spacing: 0.15em;
-      font-weight: normal;
-    }
-
-    .banner-placeholder p {
-      margin: 10px 0 0;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
+    .banner img {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin: 0 auto;
     }
 
     .page {
@@ -154,11 +142,11 @@
 
 <body>
 
-  <header class="banner-placeholder">
-    <div>
-      <h1>LUXIRA</h1>
-      <p>Records and Archive</p>
-    </div>
+  <header class="banner">
+    <img
+      src="luxira-banner.png"
+      alt="Luxira Records and Archive — In Light We Trust — 614 Y4"
+    >
   </header>
 
   <div class="page">
