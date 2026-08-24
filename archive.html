@@ -22,31 +22,21 @@
       line-height: 1.6;
     }
 
-    header {
-      background: #10263a;
-      color: #f3eee3;
-      padding: 18px 24px;
-      border-bottom: 5px solid #66707a;
-    }
+ .banner {
+  width: 100%;
+  background: #10263a;
+  border-bottom: 3px solid #10263a;
+  line-height: 0;
+}
 
-    .header-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .institution {
-      margin: 0;
-      font-size: 1.65rem;
-      letter-spacing: 0.04em;
-    }
-
-    .motto {
-      margin-top: 3px;
-      font-size: 0.88rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      opacity: 0.8;
-    }
+.banner img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: contain;
+  object-position: center;
+  margin: 0 auto;
+}
 
     nav {
       background: #d7cfbe;
@@ -179,11 +169,11 @@
 
 <body>
 
-<header>
-  <div class="header-inner">
-    <h1 class="institution">Luxira Records and Archive</h1>
-    <div class="motto">In Light We Trust</div>
-  </div>
+<header class="banner">
+  <img
+    src="home/luxira-banner.png"
+    alt="Luxira Records and Archive — In Light We Trust — 614 Y4"
+  >
 </header>
 
 <nav>
